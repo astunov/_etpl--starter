@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     sass = require('gulp-sass'),
     plumber = require('gulp-plumber'),
+    dirSync = require('gulp-directory-sync'),
 
     reload = browserSync.reload;
 
@@ -48,8 +49,6 @@ var config = {
     reloadDelay: 300,
 };
 
-var TINY_PNG_API = ' '; // input your api key here
-
 gulp.task('jade:build', ['style:build'], function () {
    gulp.src([srcDir + '*.jade', '!' + srcDir + '_*.jade'])
       .pipe(plumber())
@@ -74,12 +73,14 @@ gulp.task('style:build',  function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('image:build', function () {
-    gulp.src(path.src.img)
-        .pipe(gulp.dest(path.build.img))
-        .pipe(reload({stream: true}));
+gulp.task('img:sync', function() {
+  return gulp.src('')
+    .pipe(plumber())
+    .pipe(
+      dirSync('src/i/', 'build/i/', {printSummary: true}
+    ))
+    .pipe(browserSync.stream());
 });
-
 gulp.task('clean', function (cb) {
    rimraf('./build/*.html', cb);
 });
@@ -95,6 +96,7 @@ gulp.task('watch', function(){
     watch([path.watch.css], function(event, cb) {
        gulp.start('jade:build');
     });
+    gulp.watch('src/i/**/*', ['img:sync']);
 });
 
 gulp.task('webserver', function () {
@@ -104,7 +106,7 @@ gulp.task('webserver', function () {
 gulp.task('build', [
     'clean',
     'jade:build',
-    'image:build',
+    'img:sync',
 ]);
 
 gulp.task('default', ['build', 'webserver', 'watch']);

@@ -1,0 +1,56 @@
+extends ./_layout
+
+block vars
+	-
+		var UTM = 'from=mail_tin_credit'
+		HOME = HOME + '?' + UTM
+		TAKSA = TAKSA + '?' + UTM
+
+//- PRODUCTION
+block letter
+	+table({"class": "c-card"})
+		tr
+			td.h1
+				div Здравствуйте, <nobr>%%co_name%%&nbsp;%%co_secondname%%</nobr>!
+		tr
+			td.text: div
+				| У вас есть расчётная банковская карта «Юлмарт–Тинькофф»,
+				| <br> с которой любая покупка в #[+a({"href": HOME}) Юлмарте] становится ещё выгоднее!
+		tr
+			td.c-card__hr
+				+hr
+		tr
+			td.c-card__thumb
+				+table
+					tr
+						td(valign="top" ).c-card__thumb-title.is-accent-alter: div.
+							Используйте
+							<br> преимущества
+							<br> вашей карты!
+						td.c-card__thumb-img(valign="middle" align="right" style="padding-top:10px;")
+							img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
+		tr
+			td(style="padding-top:10px;")
+				- var creditList = ["Cashback 3% за покупки в Юлмарте и до 2% за все остальные покупки;", "500 бонусных баллов в подарок при активации карты;", "Более 300 000 точек бесплатного пополнения;", "Лучшее мобильное приложение и интернет-банк."]
+				+list(creditList)
+
+	+table({"class": "c-advantage"})
+		tr
+			td(style="padding-top: 20px;")
+				+table
+					tr
+						td(align="center").h1: div
+							span.is-accent Компенсируйте бонусами
+							| <br> покупки в Юлмарте
+					tr
+						td.c-advantage__desc: div 1 бонус = 1 рубль
+		tr
+			td(style="padding-bottom: 20px;")
+				+pluses(advantages)
+		tr
+			td(align="center" style="padding-bottom: 25px;")
+				+btn({
+					"link": HOME,
+					"title": "За покупками — в Юлмарт!",
+					"width": "273"
+				})
