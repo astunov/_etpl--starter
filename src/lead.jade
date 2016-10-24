@@ -19,19 +19,27 @@ block letter
 			td.c-card__hr
 				+hr
 		tr
-			td.c-card__thumb
-				+table
-					tr
-						td.c-card__thumb-img(valign="middle")
-							img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
-						td(valign="top").c-card__thumb-desc: div.
-							Мы создали вам личный кабинет
-							на&nbsp;#[+a({"href": HOME}) ulmart.ru], где будет храниться
-							информация о ваших заказах.
-							Также&nbsp;вы сможете участвовать
-							в&nbsp;программе скидок #[+a({"href": TAKSA}) ТАКСА]
-							и&nbsp;первым узнавать о специальных
-							предложениях и акциях Юлмарта.
+			td.two-column
+				| <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="50%" valign="top"><![endif]-->
+				.column
+					+table({"class":"content"})
+						tr
+							td.inner
+								img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
+				| <!--[if (gte mso 9)|(IE)]></td><td width="50%" valign="top"><![endif]-->
+				.column
+					+table({"class":"content"})
+						tr
+							td.inner.
+								Мы создали вам личный кабинет
+								на&nbsp;#[+a({"href": HOME}) ulmart.ru], где будет храниться
+								информация о ваших заказах.
+								Также&nbsp;вы сможете участвовать
+								в&nbsp;программе скидок #[+a({"href": TAKSA}) ТАКСА]
+								и&nbsp;первым узнавать о специальных
+								предложениях и акциях Юлмарта.
+
+				| <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 		tr
 			td(style="padding-bottom:20px;")
 				+hr
@@ -40,61 +48,66 @@ block letter
 				b.is-accent-alter Ваш логин: <br>
 				span.is-not-link %% co_login%%
 		tr
-		tr
 			td.text: div
 				| #[b.is-accent-alter Создайте пароль] к личному кабинету, перейдя по ссылке: <br>
 				span.link %%co_link_pass%%
 
-	+table({"class": "c-prove"})
 		tr
-			td(align="center" style="padding-top:20px; padding-bottom: 11px;")
-				+table({"width":"480"})
+			td
+				+table({"class": "c-prove"})
 					tr
-						td(align="center").h1: div
-							span.is-accent Юлмарт – крупнейший
-							| <br> онлайн-ретейлер России*
-					tr
-						td(align="center" style="padding-top:10px;").text: div.
-							На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12 миллионов товаров: от ультрабуков, смартфонов и компьютеров до товаров для дома и автомобиля, детских товаров, косметики и цифрового контента. У нас свыше 400&nbsp;представительств в 240 городах и доставка по всей России.
+						td(align="center" style="padding-top:20px; padding-bottom: 11px;")
+							+table({"width":"480"})
+								tr
+									td(align="center").h1: div
+										span.is-accent Юлмарт – крупнейший
+										| <br> онлайн-ретейлер России*
+								tr
+									td(align="center" style="padding-top:10px;").text: div.
+										На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12 миллионов товаров: от ультрабуков, смартфонов и компьютеров до товаров для дома и автомобиля, детских товаров, косметики и цифрового контента. У нас свыше 400&nbsp;представительств в 240 городах и доставка по всей России.
 
-	//- +table({"class": "c-card"})
-	//- 	tr
-	//- 		td.h1: div Здравствуйте, Владислав Ильич!
-	//- 	tr
-	//- 		td.text: div Вам выпущена расчётная банковская карта «Юлмарт–Тинькофф», с которой любая покупка в #[+a({"href": HOME}) Юлмарте] становится ещё выгоднее!
+
+
 	//- 	tr
 	//- 		td.c-card__thumb
+	//- 			img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
 	//- 			+table
 	//- 				tr
-	//- 					td.c-card__accent: div.
-	//- 						Используйте
-	//- 						преимущества
-	//- 						вашей карты!
-	//- 					td
-	//- 						img(src="#{URL + 'card.png'}" width="276" height="189" alt="Ваша карта")
-	//- 	tr
-	//- 		td
-	//- 			- var debitList = ['Cashback 2% за покупки в Юлмарте и до 1,5% за остальные покупки;', 'Доходность на остаток по счёту — до 7%;', '300 бонусов в подарок при активации карты;', 'Бесплатное снятие наличных на сумму от 3 000 руб. в любых банкоматах;', 'Лучшее мобильное приложение и интернет-банк.']
-	//- 			+list(debitList)
+	//- 					td.c-card__thumb-img(valign="middle")
+	//- 						img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
+	//- 					td(valign="top").c-card__thumb-desc: div.
+	//- 						Мы создали вам личный кабинет
+	//- 						на&nbsp;#[+a({"href": HOME}) ulmart.ru], где будет храниться
+	//- 						информация о ваших заказах.
+	//- 						Также&nbsp;вы сможете участвовать
+	//- 						в&nbsp;программе скидок #[+a({"href": TAKSA}) ТАКСА]
+	//- 						и&nbsp;первым узнавать о специальных
+	//- 						предложениях и акциях Юлмарта.
 
-	//- 			- var creditList = ["Cashback 3% за покупки в Юлмарте и до 2% за все остальные покупки;", "500 бонусных баллов в подарок при активации карты;", "Более 300 000 точек бесплатного пополнения;", "Лучшее мобильное приложение и интернет-банк."]
-	//- 			+list(debitList)
 
-	//- +table({"class": "c-advantage"})
-	//- 	tr
-	//- 		td.h2: div
-	//- 			span Компенсируйте бонусами
-	//- 			<br> покупки в Юлмарте
-	//- 	tr
-	//- 		td.c-advantage__desc: div 1 бонус = 1 рубль
-	//- 	tr
-	//- 		td
-	//- 			+pluses(advantages)
-	//- 	tr
-	//- 		td
-	//- 			+btn({
-	//- 				"link": HOME,
-	//- 				"title": "За покупками — в Юлмарт!"
-	//- 			})
 
+	//- 	tr
+	//- 		td(style="padding-bottom:20px;")
+	//- 			+hr
+	//- 	tr
+	//- 		td.text(style="padding-bottom:10px;"): div
+	//- 			b.is-accent-alter Ваш логин: <br>
+	//- 			span.is-not-link %% co_login%%
+	//- 	tr
+	//- 	tr
+	//- 		td.text: div
+	//- 			| #[b.is-accent-alter Создайте пароль] к личному кабинету, перейдя по ссылке: <br>
+	//- 			span.link %%co_link_pass%%
+
+	//- +table({"class": "c-prove"})
+	//- 	tr
+	//- 		td(align="center" style="padding-top:20px; padding-bottom: 11px;")
+	//- 			+table({"width":"480"})
+	//- 				tr
+	//- 					td(align="center").h1: div
+	//- 						span.is-accent Юлмарт – крупнейший
+	//- 						| <br> онлайн-ретейлер России*
+	//- 				tr
+	//- 					td(align="center" style="padding-top:10px;").text: div.
+	//- 						На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12 миллионов товаров: от ультрабуков, смартфонов и компьютеров до товаров для дома и автомобиля, детских товаров, косметики и цифрового контента. У нас свыше 400&nbsp;представительств в 240 городах и доставка по всей России.
 

@@ -1,58 +1,48 @@
-/*********************************
-** CORE
-*********************************/
-html,
 body {
-  margin: 0;
+  min-width: 100%;
   padding: 0;
-  border: 0;
-  outline: 0; }
+  background-color: #f2f2f2;
+  Margin: 0; }
 
-/* Resets all body margins and padding to 0 for good measure */
-body {
-  /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  background-color: #f2f2f2; }
+table {
+  font-family: sans-serif;
+  border-spacing: 0; }
 
-table td {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border: 0 none; }
-
-/*This resolves the Outlook 07, 10, and Gmail td padding issue. Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
-img {
-  line-height: 100%;
-  height: auto;
-  text-decoration: none;
-  border: 0 none;
-  outline: none;
-  font-size: 16px;
-  white-space: pre; }
-
-a img {
-  border: 0 none; }
-
-table,
 td {
-  border-collapse: collapse; }
+  padding: 0; }
 
-#backgroundTable {
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0;
-  padding: 0;
+img {
+  border: 0; }
+
+.wrapper {
+  width: 100%;
   table-layout: fixed;
   background-color: #f2f2f2;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-.wrapper {
-  width: 600px;
-  margin: 0 auto; }
+.webkit {
+  max-width: 600px; }
 
-div, a, span {
-  font-family: Arial, Helvetica, sans-serif; }
+.outer {
+  Margin: 0 auto;
+  width: 100%;
+  max-width: 600px; }
+
+/*Two column layout*/
+.two-column {
+  text-align: center;
+  font-size: 0; }
+
+.two-column .column {
+  width: 100%;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: top; }
+
+.two-column .content {
+  font-size: 14px;
+  text-align: left; }
 
 /*********************************
 ** VARS
@@ -80,10 +70,6 @@ div, a, span {
     padding-top: 30px; }
   .c-card > tr:last-child > td {
     padding-bottom: 40px; }
-  .c-card > tr > td:first-child:not(.c-card__thumb) {
-    padding-left: 40px; }
-  .c-card > tr > td:last-child:not(.c-card__thumb) {
-    padding-right: 40px; }
   .c-card__hr {
     padding-top: 15px; }
   .c-card__thumb {
