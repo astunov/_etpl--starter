@@ -10,7 +10,7 @@ block letter
 	+table({"class": "c-card"})
 		tr
 			td.h1
-				div Здравствуйте, <nobr>%%co_name%%&nbsp;%%co_secondname%%</nobr>!
+				//- div Здравствуйте, <nobr>%%co_name%%&nbsp;%%co_secondname%%</nobr>!
 		tr
 			td.text: div
 				| Вы подали заявку на выпуск платёжной карты #[+a({"href": HOME}) Юлмарта].
@@ -19,18 +19,18 @@ block letter
 			td.c-card__hr
 				+hr
 		tr
-			td.two-column
+			td.two-column(style="padding-left: 23px; padding-right:23px; padding-bottom: 10px;")
 				| <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="50%" valign="top"><![endif]-->
 				.column
-					+table({"class":"content"})
+					+table({"class":"content content--thumb"})
 						tr
 							td.inner
 								img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
 				| <!--[if (gte mso 9)|(IE)]></td><td width="50%" valign="top"><![endif]-->
 				.column
-					+table({"class":"content"})
+					+table({"class":"content content--desc"})
 						tr
-							td.inner.
+							td.inner.text(style="padding-top: 25px; padding-left:20px;"): div.
 								Мы создали вам личный кабинет
 								на&nbsp;#[+a({"href": HOME}) ulmart.ru], где будет храниться
 								информация о ваших заказах.
@@ -44,70 +44,25 @@ block letter
 			td(style="padding-bottom:20px;")
 				+hr
 		tr
-			td.text(style="padding-bottom:10px;"): div
+			td.text(style="padding-bottom:10px;" align="left"): div
 				b.is-accent-alter Ваш логин: <br>
-				span.is-not-link %% co_login%%
+				span.is-not-link %%co_login%%
 		tr
-			td.text: div
+			td.text(style="padding-bottom: 40px;" align="left"): div
 				| #[b.is-accent-alter Создайте пароль] к личному кабинету, перейдя по ссылке: <br>
 				span.link %%co_link_pass%%
 
-		tr
-			td
-				+table({"class": "c-prove"})
-					tr
-						td(align="center" style="padding-top:20px; padding-bottom: 11px;")
-							+table({"width":"480"})
-								tr
-									td(align="center").h1: div
-										span.is-accent Юлмарт – крупнейший
-										| <br> онлайн-ретейлер России*
-								tr
-									td(align="center" style="padding-top:10px;").text: div.
-										На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12 миллионов товаров: от ультрабуков, смартфонов и компьютеров до товаров для дома и автомобиля, детских товаров, косметики и цифрового контента. У нас свыше 400&nbsp;представительств в 240 городах и доставка по всей России.
+		+table({"class": "c-prove"})
+			tr
+				td(align="center" style="padding-top:50px; padding-bottom: 11px;")
+					+table({"width": "80%", "align": "center", "style": "margin 0 auto;"})
+						tr
+							td(align="center").h1: div
+								span.is-accent Юлмарт –&nbsp;крупнейший
+								| <br> онлайн-ретейлер России*
+						tr
+							td(align="center" style="padding-top:10px;").text: div.
+								На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12&nbsp;миллионов товаров: от&nbsp;ультрабуков, смартфонов и&nbsp;компьютеров до&nbsp;товаров для дома и&nbsp;автомобиля, детских товаров, косметики и&nbsp;цифрового контента. У нас свыше 400&nbsp;представительств в 240&nbsp;городах и&nbsp;доставка по&nbsp;всей&nbsp;России.
 
 
-
-	//- 	tr
-	//- 		td.c-card__thumb
-	//- 			img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
-	//- 			+table
-	//- 				tr
-	//- 					td.c-card__thumb-img(valign="middle")
-	//- 						img(src="#{URL + 'card.png'}" width="276" height="189" alt="")
-	//- 					td(valign="top").c-card__thumb-desc: div.
-	//- 						Мы создали вам личный кабинет
-	//- 						на&nbsp;#[+a({"href": HOME}) ulmart.ru], где будет храниться
-	//- 						информация о ваших заказах.
-	//- 						Также&nbsp;вы сможете участвовать
-	//- 						в&nbsp;программе скидок #[+a({"href": TAKSA}) ТАКСА]
-	//- 						и&nbsp;первым узнавать о специальных
-	//- 						предложениях и акциях Юлмарта.
-
-
-
-	//- 	tr
-	//- 		td(style="padding-bottom:20px;")
-	//- 			+hr
-	//- 	tr
-	//- 		td.text(style="padding-bottom:10px;"): div
-	//- 			b.is-accent-alter Ваш логин: <br>
-	//- 			span.is-not-link %% co_login%%
-	//- 	tr
-	//- 	tr
-	//- 		td.text: div
-	//- 			| #[b.is-accent-alter Создайте пароль] к личному кабинету, перейдя по ссылке: <br>
-	//- 			span.link %%co_link_pass%%
-
-	//- +table({"class": "c-prove"})
-	//- 	tr
-	//- 		td(align="center" style="padding-top:20px; padding-bottom: 11px;")
-	//- 			+table({"width":"480"})
-	//- 				tr
-	//- 					td(align="center").h1: div
-	//- 						span.is-accent Юлмарт – крупнейший
-	//- 						| <br> онлайн-ретейлер России*
-	//- 				tr
-	//- 					td(align="center" style="padding-top:10px;").text: div.
-	//- 						На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12 миллионов товаров: от ультрабуков, смартфонов и компьютеров до товаров для дома и автомобиля, детских товаров, косметики и цифрового контента. У нас свыше 400&nbsp;представительств в 240 городах и доставка по всей России.
 

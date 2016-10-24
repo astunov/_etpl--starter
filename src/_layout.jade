@@ -1,6 +1,7 @@
 -
 	HOME = 'https://www.ulmart.ru/'
-	URL = './i/'
+	// URL = './i/'
+	URL = 'http://link.ulmart.ru/custloads/527016013/cyr/tritin/'
 	TAKSA ='https://www.ulmart.ru/loyalty/landing'
 	HOME = HOME + '?' + UTM
 block vars
@@ -18,5 +19,14 @@ html
 				+table({"class":"outer", "align":"center"})
 					tr
 						td
+							+header
+					tr
+						td
 								block letter
+					tr
+						td
+							+cats
+					tr
+						td
+							+footer
 				| <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

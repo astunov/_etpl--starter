@@ -107,7 +107,13 @@ mixin head
 
 		@media (max-width: 600px) {
 			div {
-			color: red;
+			}
+
+			.inner.text {
+				padding-top: 0 !important;
+			}
+			.c-header__logo {
+				text-align: center !important;
 			}
 		}
 
@@ -124,97 +130,125 @@ mixin header()
 					img(src="#{URL + 'logo.png'}" width="178" height="20" alt="Перейти на сайт Юлмарта")
 
 mixin footer()
-	+table.
-		  <!--FOOTER-->
-		  <tr>
-		    <td style="border-collapse: collapse;">
-		      <div align="center" style="font-family: Arial, Helvetica, sans-serif; line-height: 1.2;">
-		        <table cellpadding="0" cellspacing="0" bgcolor="white" border="0" width="600" align="center" class="cmn-tb applinks-tb " style="border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">
-		          <tr>
-		            <td align="left" valign="middle" style="border-collapse: collapse; padding-bottom: 5px; padding-left: 15px; padding-top: 20px;"><a href="https://market.yandex.ru/shop/18433/reviews/add" target="_blank" style="color: #000000; font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/ym5.png" height="20" width="213" alt="Яндекс.Маркет" class="img-block" style="-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;"></a></td>
-		            <td align="left" valign="middle" style="border-collapse: collapse; padding-bottom: 5px; padding-top: 20px;"><a href="http://www.akit.ru/" target="_blank" style="color: #000000; font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/akit.png" height="33" width="83" alt="Акит" class="img-block" style="-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;"></a></td>
-		            <td align="right" valign="middle" style="border-collapse: collapse; padding-bottom: 5px; padding-top: 20px;"><a href="https://itunes.apple.com/ru/app/ulmart/id867679958" target="_blank" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/astore.png" height="20" width="62" alt="App Store" class="img-block" style="-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;"></a></td>
-		            <td align="right" valign="middle" style="border-collapse: collapse; padding-bottom: 5px; padding-right: 15px; padding-top: 20px;"><a href="https://play.google.com/store/apps/details?id=ru.ulmart.mobapp" target="_blank" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/gplay.png" height="20" width="61" alt="Google Play" class="img-block" style="-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;"></a></td>
-		          </tr>
-		        </table>
-		      </div>
-		    </td>
-		  </tr>
-		                <tr>
-		                  <td align="center" style="border-collapse: collapse;">
-		                    <div align="center" style="font-family: Arial, Helvetica, sans-serif; line-height: 1.2;">
-		                      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" bgcolor="#ec1b30" style="border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">
-		                        <tr>
-		                          <td style="border-collapse: collapse;">
-		                            <div align="center" style="font-family: Arial, Helvetica, sans-serif; line-height: 1.2;">
-		                              <table cellpadding="0" cellspacing="0" border="0" width="300" align="center" bgcolor="#ec1b30" style="border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">
-		                                <tr>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="http://vk.com/i_love_ulmart" target="_blank" title="VK" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-vk.png" alt="VK" width="10" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="http://www.facebook.com/I.love.Ulmart" target="_blank" title="FB" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-fb.png" alt="FB" width="10" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="http://www.odnoklassniki.ru/iloveulmart" target="_blank" title="OK" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-ok.png" alt="OK" width="8" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="http://my.mail.ru/community/ulmart_ru/" target="_blank" title="MM" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-moimir.png" alt="MM" width="13" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="https://twitter.com/ulmart_ru" target="_blank" title="TW" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-twitter.png" alt="TW" width="15" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="https://plus.google.com/b/102298704406930774476/102298704406930774476/" target="_blank" title="G+" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-g_plus.png" alt="G+" width="13" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="http://instagram.com/iloveulmart" target="_blank" title="IT" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-inst.png" alt="IT" width="14" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="http://www.youtube.com/user/ulmartofficial" target="_blank" title="YT" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-youtube.png" alt="YT" width="16" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                  <td align="center" valign="middle" style="border-collapse: collapse; padding: 10px 0;"><a href="https://ru.foursquare.com/ulmart_ru" target="_blank" title="FS" style="font-family: Arial, Helvetica, sans-serif;"><img src="http://link.ulmart.ru/custloads/527016013/tpl/i-fs.png" alt="FS" width="10" height="15" style="-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;"></a></td>
-		                                </tr>
-		                              </table>
-		                            </div>
-		                          </td>
-		                        </tr>
-		                      </table>
-		                    </div>
-		                  </td>
-		                </tr>
-		  <tr>
-		    <td style="border-collapse: collapse;">
-		      <div align="center" style="font-family: Arial, Helvetica, sans-serif; line-height: 1.2;">
-		        <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" style="background-color: #fff; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">
-		          <tr>
-		            <td valign="top" align="left" style="border-collapse: collapse; color: #a3a6a9; font-size: 8pt; padding: 10px 15px 20px; text-align: justify;">
-		              <div style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2;">* По данным рейтинга E-Commerce Index TOP-100 2016, проведенному Data Insight и Ruward. <br><br></div>
-		              <div style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2;">
-		              <a href="#" style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;">Подробнее</a> о карте «Юлмарт – Тинькофф».<br><br></div>
-		              <div style="color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2;"> Непубличное акционерное общество «Юлмарт», 197227, Санкт-Петербург, пр.&nbsp;Сизова, д.&nbsp;2, лит.&nbsp;А, ОГРН 1089848006423; ООО&nbsp;«Юлмарт&nbsp;РСК», 197227, Санкт-Петербург, пр.&nbsp;Сизова, д.&nbsp;2, лит.&nbsp;А, ОГРН 1117847607900. </div>
-		              <div style="color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2; padding-top: 5px;">Чтобы не пропустить наши новости, акции и скидки, добавьте <a href="mailto:4u@e.ulmart.ru" style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;"><span style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif;">4u@e.ulmart.ru </span></a>в&nbsp;свою адресную книгу.</div>
-		              <div style="color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2; padding-top: 5px;">Вам отправлено данное предложение, так как вы были подписаны на получение уникальных предложений от&nbsp;компании Юлмарт. Настроить подписку в соответствии со своими интересами, а также отписаться от рассылки вы можете по&nbsp;<a href="http://senshi.webfactional.com/ulmart/are_you_sure_news.html?em=$pers_3$" target="_blank" style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;"><span style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif;">ссылке</span></a>. Снова подписаться на рассылку можно&nbsp;<a href="http://senshi.webfactional.com/ulmart/subscription_settings.php" target="_blank" style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;"><span style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif;">здесь</span></a>.</div>
-		              <div style="color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2; padding-top: 5px;">Пожалуйста, не отвечайте на это письмо. Для ответа воспользуйтесь формой <a href="http://www.ulmart.ru/help/current/feedback" target="_blank" style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;"><span style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif;">обратной связи</span></a>.<br>Посмотреть <a href="http://www.ulmart.ru/help/shahty/agreement" target="_blank" style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;"><span style="color: #ec1b30; font-family: Arial, Helvetica, sans-serif;">информацию </span></a>о&nbsp;правилах обработки персональных данных.</div>
-		            </td>
-		          </tr>
-		        </table>
-		      </div>
-		    </td>
-		  </tr>
-		</table>
-		<!-- END FOOTER-->
+	+table({"class": "footer"})
+		//- MEDIA
+		//- tr
+		//- 	td(style='border-collapse: collapse;')
+		//- 		div(align='center', style='font-family: Arial, Helvetica, sans-serif; line-height: 1.2;')
+		//- 			table.cmn-tb.applinks-tb(cellpadding='0', cellspacing='0', bgcolor='white', border='0', width='100%', align='center', style='border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;')
+		//- 				tr
+		//- 					td(align='left', valign='middle', style='border-collapse: collapse; padding-bottom: 5px; padding-left: 15px; padding-top: 20px;')
+		//- 						a(href='https://market.yandex.ru/shop/18433/reviews/add', target='_blank', style='color: #000000; font-family: Arial, Helvetica, sans-serif;')
+		//- 							img.img-block(src='http://link.ulmart.ru/custloads/527016013/tpl/ym5.png', height='20', width='213', alt='Яндекс.Маркет', style='-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;')
+		//- 					td(align='left', valign='middle', style='border-collapse: collapse; padding-bottom: 5px; padding-top: 20px;')
+		//- 						a(href='http://www.akit.ru/', target='_blank', style='color: #000000; font-family: Arial, Helvetica, sans-serif;')
+		//- 							img.img-block(src='http://link.ulmart.ru/custloads/527016013/tpl/akit.png', height='33', width='83', alt='Акит', style='-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;')
+		//- 					td(align='right', valign='middle', style='border-collapse: collapse; padding-bottom: 5px; padding-top: 20px;')
+		//- 						a(href='https://itunes.apple.com/ru/app/ulmart/id867679958', target='_blank', style='font-family: Arial, Helvetica, sans-serif;')
+		//- 							img.img-block(src='http://link.ulmart.ru/custloads/527016013/tpl/astore.png', height='20', width='62', alt='App Store', style='-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;')
+		//- 					td(align='right', valign='middle', style='border-collapse: collapse; padding-bottom: 5px; padding-right: 15px; padding-top: 20px;')
+		//- 						a(href='https://play.google.com/store/apps/details?id=ru.ulmart.mobapp', target='_blank', style='font-family: Arial, Helvetica, sans-serif;')
+		//- 							img.img-block(src='http://link.ulmart.ru/custloads/527016013/tpl/gplay.png', height='20', width='61', alt='Google Play', style='-ms-interpolation-mode: bicubic; border: none; display: block; outline: none; text-decoration: none;')
 
-	+gmailFix
+		//- SOCIAL
+		tr
+			td(align='center', style='border-collapse: collapse;')
+				div(align='center', style='font-family: Arial, Helvetica, sans-serif; line-height: 1.2;')
+					table(cellpadding='0', cellspacing='0', border='0', width='100%', align='center', bgcolor='#ec1b30', style='border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;')
+						tr
+							td(style='border-collapse: collapse;')
+								div(align='center', style='font-family: Arial, Helvetica, sans-serif; line-height: 1.2;')
+									table(cellpadding='0', cellspacing='0', border='0', width='50%', align='center', bgcolor='#ec1b30', style='border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;')
+										tr
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='http://vk.com/i_love_ulmart', target='_blank', title='VK', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-vk.png', alt='VK', width='10', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='http://www.facebook.com/I.love.Ulmart', target='_blank', title='FB', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-fb.png', alt='FB', width='10', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='http://www.odnoklassniki.ru/iloveulmart', target='_blank', title='OK', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-ok.png', alt='OK', width='8', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='http://my.mail.ru/community/ulmart_ru/', target='_blank', title='MM', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-moimir.png', alt='MM', width='13', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='https://twitter.com/ulmart_ru', target='_blank', title='TW', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-twitter.png', alt='TW', width='15', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='https://plus.google.com/b/102298704406930774476/102298704406930774476/', target='_blank', title='G+', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-g_plus.png', alt='G+', width='13', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='http://instagram.com/iloveulmart', target='_blank', title='IT', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-inst.png', alt='IT', width='14', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='http://www.youtube.com/user/ulmartofficial', target='_blank', title='YT', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-youtube.png', alt='YT', width='16', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+											td(align='center', valign='middle', style='border-collapse: collapse; padding: 10px 0;')
+												a(href='https://ru.foursquare.com/ulmart_ru', target='_blank', title='FS', style='font-family: Arial, Helvetica, sans-serif;')
+													img(src='http://link.ulmart.ru/custloads/527016013/tpl/i-fs.png', alt='FS', width='10', height='15', style='-ms-interpolation-mode: bicubic; border: none; outline: none; text-decoration: none;')
+
+		//- OTPISKA
+		tr
+			td(style='border-collapse: collapse;')
+				div(align='center', style='font-family: Arial, Helvetica, sans-serif; line-height: 1.2;')
+					table(cellpadding='0', cellspacing='0', border='0', width='100%', align='center', style='background-color: #fff; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;')
+						tr
+							td(valign='top', align='left', style='border-collapse: collapse; color: #a3a6a9; font-size: 8pt; padding: 10px 15px 20px; text-align: justify;')
+								div(style='font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2;')
+									| * По данным рейтинга E-Commerce Index TOP-100 2016, проведенному Data Insight и Ruward.
+									br
+									br
+								div(style='font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2;')	#[a.footer-link(href="#{'http://tinkoff.ulmart.ru/' + UTM}") Подробнее] о карте «Юлмарт – Тинькофф».
+									br
+									br
+								div(style='color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2;')
+									| Непубличное акционерное общество «Юлмарт», 197227, Санкт-Петербург, пр. Сизова, д. 2, лит. А, ОГРН 1089848006423; ООО «Юлмарт РСК»,
+									| 197227, Санкт-Петербург, пр. Сизова, д. 2, лит. А, ОГРН 1117847607900.
+								div(style='color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2; padding-top: 5px;')
+									| Чтобы не пропустить наши новости, акции и скидки, добавьте #[a.footer-link(href="mailto:4u@e.ulmart.ru") 4u@e.ulmart.ru] в свою адресную книгу.
+								div(style='color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2; padding-top: 5px;')
+									| Вам отправлено данное предложение, так как вы были подписаны на получение уникальных предложений от компании Юлмарт. Настроить подписку в соответствии со своими интересами, а также отписаться от рассылки вы можете по #[a.footer-link(href="http://senshi.webfactional.com/ulmart/are_you_sure_news.html?em=$pers_3$") ссылке]. Снова подписаться на рассылку можно #[a.footer-link(href="'http://senshi.webfactional.com/ulmart/subscription_settings.php") здесь].
+								div(style='color: #a3a6a9; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.2; padding-top: 5px;')
+									| Пожалуйста, не отвечайте на это письмо. Для ответа воспользуйтесь формой #[a.footer-link(href="http://www.ulmart.ru/help/current/feedback") обратной связи].
+									br
+									| Посмотреть #[a.footer-link(href="http://www.ulmart.ru/help/shahty/agreement") информацию] о правилах обработки персональных данных.
+
 
 //- @param {Array:Object} data of items
 mixin catsRow(data)
 	-
 		var tdWidth = 100 / data.length
-	each item in data
+	each item,number in data
 		- tdPadding = (item.pin) ? '10' : '40'
-		td.c-cats__item(width="#{tdWidth + '%'}" align="center" valign="top" height="143" style="padding-top: #{tdPadding + 'px'}")
-			+a({"href": item.link + UTM})
-				+table({"align": "center", "class":"c-cat-item"})
-					if item.pin
+		| <!--[if (gte mso 9)|(IE)]><td width="20%" valign="top"><![endif]-->
+		div.c-cats__item(align="center" valign="top" height="143" style="padding-top: #{tdPadding + 'px'}")
+				+a({"href": item.link + '?' + UTM})
+					+table({"align": "center", "class":"c-cat-item"})
+						if item.pin
+							tr
+								td(align="right" height="30").c-cat-item__pin !{item.pin}
 						tr
-							td(align="right" height="30").c-cat-item__pin !{item.pin}
-					tr
-						td.c-cat-item__thumb(align="center" valign="middle")
-							img(src="#{URL + item.icon}" alt="" width="#{item.width || auto}")
-					tr
-						td.c-cat-item__title(align="center" )
-							| !{item.title}
+							td.c-cat-item__thumb(align="center" valign="middle")
+								img(src="#{URL + item.icon}" alt="" width="#{item.width || auto}")
+						tr
+							td.c-cat-item__title(align="center" )
+								| !{item.title}
+		if (data.length - 1) !== number
+			| <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+
 mixin cats
 	+table({"class": "c-cats"})
 		tr
-			+catsRow(cats.slice(0,5))
+			td.c-cats__wrapper
+				| <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><![endif]-->
+				+catsRow(cats.slice(0,5))
+				| <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 		tr
-			+catsRow(cats.slice(5))
+			td.c-cats__wrapper
+				| <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><![endif]-->
+				+catsRow(cats.slice(5))
+				| <!--[if (gte mso 9)|(IE)]</td></tr></table><![endif]-->
 	+table
 		tr
 			td(style="padding-top: 18px;")
