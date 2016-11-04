@@ -3,14 +3,13 @@ extends ./_layout
 block vars
 	-
 		var UTM = 'from=mail_tin_welcome'
-		HOME = HOME + '?' + UTM
 
 //- PRODUCTION
 block letter
 	+table({"class": "c-card"})
 		tr
-			td.h1
-				//- div Здравствуйте, <nobr>%%co_name%%&nbsp;%%co_secondname%%</nobr>!
+			td.h1.h1--small
+				div Здравствуйте, <nobr>%%co_name%%&nbsp;%%co_secondname%%</nobr>!
 		tr
 			td.text: div
 				| Вы подали заявку на выпуск платёжной карты #[+a({"href": HOME}) Юлмарта].
@@ -52,17 +51,17 @@ block letter
 				| #[b.is-accent-alter Создайте пароль] к личному кабинету, перейдя по ссылке: <br>
 				span.link %%co_link_pass%%
 
-		+table({"class": "c-prove"})
-			tr
-				td(align="center" style="padding-top:50px; padding-bottom: 11px;")
-					+table({"width": "80%", "align": "center", "style": "margin 0 auto;"})
-						tr
-							td(align="center").h1: div
-								span.is-accent Юлмарт –&nbsp;крупнейший
-								| <br> онлайн-ретейлер России*
-						tr
-							td(align="center" style="padding-top:10px;").text: div.
-								На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12&nbsp;миллионов товаров: от&nbsp;ультрабуков, смартфонов и&nbsp;компьютеров до&nbsp;товаров для дома и&nbsp;автомобиля, детских товаров, косметики и&nbsp;цифрового контента. У нас свыше 400&nbsp;представительств в 240&nbsp;городах и&nbsp;доставка по&nbsp;всей&nbsp;России.
+	+table({"class": "c-prove"})
+		tr
+			td(align="center" style="padding-top:25px; padding-bottom: 11px;")
+				+table({"width": "80%", "align": "center", "style": "margin 0 auto;"})
+					tr
+						td(align="center").h1: div
+							span.is-accent Юлмарт –&nbsp;крупнейший
+							| <br> онлайн-ретейлер России*
+					tr
+						td(align="center" style="padding-top:10px;").text: div.
+							На #[+a({"href": HOME}) ulmart.ru] вы найдёте более 12&nbsp;миллионов товаров: от&nbsp;ультрабуков, смартфонов и&nbsp;компьютеров до&nbsp;товаров для дома и&nbsp;автомобиля, детских товаров, косметики и&nbsp;цифрового контента. У нас свыше 400&nbsp;представительств в 240&nbsp;городах и&nbsp;доставка по&nbsp;всей&nbsp;России.
 
 
 

@@ -23,7 +23,7 @@ img
 }
 .wrapper
 {
-    // width: 100%;
+    width: 100%;
     table-layout: fixed;
 
     background-color: #f2f2f2;
@@ -61,6 +61,13 @@ img
     max-width: 277px;
 
     vertical-align: top;
+}
+
+.two-column .column.is-vertical {
+  vertical-align: middle;
+}
+.two-column .column.is-alter {
+  max-width: 300px;
 }
 
 .two-column .content
@@ -161,14 +168,21 @@ $accent-color: #30ab7f;
         font-size: 29px;
         font-weight: 600;
         line-height: 38px;
+        text-align: center;
 
-        padding-top: 35px;
-        padding-left: 40px;
+        // padding-left: 23px;
+
+        // padding-top: 35px;
+        // padding-left: 17px;
         div
         {
             line-height: 42px;
         }
     }
+}
+
+.c-prove {
+  background-color: #f2f2f2;
 }
 
 .c-cats
@@ -180,24 +194,35 @@ $accent-color: #30ab7f;
 
     border-collapse: separate;
 
-    border: 1px solid #dbdbdb;
+    // border: 1px solid #dbdbdb;
     border-radius: 5px 4px 4px 5px;
     background-color: #fff;
+    &__wrapper {
+      // border-collapse: separate;
+
+      // border: 1px solid #dbdbdb;
+      // border-radius: 5px 4px 4px 5px;
+      // background-color: #fff;
+
+      & > tr > td:not(:first-child)
+      {
+          border-left: 1px solid #dbdbdb;
+      }
+      &  > tr:not(:first-child) > td
+      {
+          border-top: 1px solid #dbdbdb;
+      }
+    }
     a
     {
         color: $gray;
     }
-    & > tr > td:not(:first-child)
-    {
-        border-left: 1px solid #dbdbdb;
-    }
-    & > tr:not(:first-child) > td
-    {
-        border-top: 1px solid #dbdbdb;
-    }
+
     &__wrapper
     {
-        padding-bottom: 30px;
+        // padding-bottom: 30px;
+
+        font-size: 0;
 
         text-align: center;
     }
@@ -206,8 +231,10 @@ $accent-color: #30ab7f;
         // padding-top: 40px;
         display: inline-block;
 
-        width: 110px;
 
+
+        max-width: 33.333%;
+        width: 115px;
         vertical-align: top;
         // max-width: 120px;
         // padding-bottom: 30px;
@@ -231,9 +258,15 @@ $accent-color: #30ab7f;
         font-size: 0;
 
         height: 65px;
+        line-height: 65px;
+        vertical-align: middle;
         a
         {
             font-size: 0;
+        }
+
+        img {
+          vertical-align: middle;
         }
     }
     &__title
@@ -242,8 +275,8 @@ $accent-color: #30ab7f;
         line-height: 18px;
 
         padding-top: 20px;
-        padding-right: 20px;
-        padding-left: 20px;
+        // padding-right: 10%;
+        // padding-left: 10%;
     }
 }
 
@@ -289,6 +322,14 @@ $accent-color: #30ab7f;
     padding-bottom: 10px;
 
     color: $gray;
+
+    &--small {
+        font-size: 14px;
+
+      // nobr {
+
+      // }
+    }
     div
     {
         line-height: 35px;
@@ -317,10 +358,6 @@ $accent-color: #30ab7f;
     &__item
     {
         padding-bottom: 18px;
-        div
-        {
-            line-height: 11px;
-        }
     }
     &__counter
     {
@@ -358,9 +395,14 @@ a,
 {
     text-align: center;
 
-    color: #fff;
+
     border-radius: 3px;
     background-color: $brand-color;
+
+    a {
+      line-height: 50px;
+      color: #fff;
+    }
 }
 
 .is-accent
@@ -395,4 +437,27 @@ a,
     text-decoration: none;
 
     color: #ec1b30;
+}
+
+
+/*Three column layout*/
+.three-column {
+    text-align: center;
+    font-size: 0;
+}
+.three-column .column {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+.three-column .contents {
+    font-size: 14px;
+    text-align: center;
+}
+.three-column .inner {
+  padding-bottom: 20px;
+}
+.three-column .text {
+    padding-top: 10px;
 }
